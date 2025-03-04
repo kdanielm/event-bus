@@ -1,4 +1,4 @@
-module github.com/enterprizesoftware/event-bus
+module github.com/kdanielm/event-bus
 
 go 1.21
 
