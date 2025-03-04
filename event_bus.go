@@ -267,6 +267,14 @@ type Subscription[T any] struct {
 	handler func(T) error
 }
 
+func (s *Subscription[T]) Handle() int64 {
+	return s.subscriptionInfo.handle
+}
+
+func (s *Subscription[T]) Subscriber() string {
+	return s.subscriptionInfo.subscriber
+}
+
 type subscriptionInfo struct {
 	topic      string
 	subscriber string
